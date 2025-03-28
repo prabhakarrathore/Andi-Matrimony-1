@@ -1,0 +1,285 @@
+error
+when add member future dob can be add that in correct
+name can be numberical and symbol 
+number can be string 
+Social Media Comments have no system to check if facebook have that id or not.
+menu sections does not have proper scroll bar it make it difficult to scroll down and up.
+send sms goes blank when click on send btn must be handle when api key is no available.
+website is slow some time 
+Staffs Panel have two options and both options showing same data it must be an error
+
+
+dashboard 
+it is working properly and have no properly
+
+Members
+free member
+it is showing correct data and have no problem
+premium member
+it is showing correct data and have no problem
+Add New Member Info
+when correct data is provided then it working.
+Deleted Members List
+correct data is showing and has no problem.
+
+premium plans
+the correct data is working has no problem
+
+Stories Listv
+the correct data is working has no problem
+
+Earnings List
+it has no error and working properly
+
+Contact Messages
+it has no error and working properly
+
+General Settings
+all the Settings are working correct and reflect all the updates
+
+Frontend Settings
+Choose Color
+All themes are working properly and reflect changes
+
+Frontend Appearances
+Header all the inputs working properly and reflect changes
+Page working properly and have no error
+Footer the inputs working properly and reflect changes
+
+Configuration
+Profile attributes
+    Religion it have no error list of data is correctly fetching and new data add correctly.
+    caste it have no error list of data is correctly fetching and new data add correctly.
+    subcaste it have no error list of data is correctly fetching and new data add correctly.
+    Language it have no error list of data is correctly fetching and new data add correctly.
+    Family value it have no error list of data is correctly fetching and new data add correctly.
+    Family status it have no error list of data is correctly fetching and new data add correctly.
+    on behalf it have no error list of data is correctly fetching and new data add correctly.
+
+Profiles sections 
+All the input are working correctly and reflect changes on save
+
+Social Media Comments
+data is save correctly
+
+payments
+All the input are working correctly and reflect changes on save
+
+Email setup 
+it is working correctly and all the Email handling error
+
+currency Settings
+    Configure
+    data is working properly
+    currency 
+    no changes can be made in currency and available currency are correct.
+captcha Settings
+can't be check by key but the input are working correctly and reflect changes on save
+Google Analytics Settings 
+can't be check by key but the input are working correctly and reflect changes on save
+sms Settings
+ twilio can't be check by key but the input are working correctly and reflect changes on save
+ msg91 can't be check by key but the input are working correctly and reflect changes on save
+
+Faq
+All the input are working correctly and reflect changes on save
+
+send sms 
+All the input are working correctly.
+
+Language 
+All the input are working correctly and reflect changes on save
+
+
+Manage Admin Profile
+All the input are working correctly and reflect changes on save
+
+Seo Settings
+All the input are working correctly and reflect changes on save
+
+staffs panel
+All roles
+new data can be and all the changes is reflect on the display.
+Staffs Role Panel
+new data can be and all the changes is reflect on the display.
+
+knowledgebase
+page showing no result and show 404 not found and can't be check.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bug Report & System Analysis
+
+ Issues Identified:
+1. Adding New Members
+    Future dates of birth can be entered, which should be restricted.
+    Names can include numerical values and symbols, which should be validated.
+    Contact numbers are saved as strings instead of numerical data types.
+   
+2. Social Media Comments
+    There is no verification system to check if the provided Facebook ID exists.
+   
+3. Menu Sections
+    The lack of a proper scroll bar makes it difficult to navigate through sections.
+   
+4. Send SMS Functionality
+    Clicking the send button results in a blank page if the API key is unavailable. This error should be handled properly.
+   
+5. Website Performance
+    The site experiences occasional slowdowns, requiring optimization.
+   
+6. Staff Panel
+    Two menu options display identical data, which appears to be an error.
+   
+ Verified Functional Sections:
+
+0. Login System
+    validation for incorrect login attempts.
+    Users can't enter blank credentials.
+
+1. Dashboard
+    Fully operational with no identified issues.
+   
+2. Members Section
+    Free Member: Data is correctly displayed without issues.
+    Premium Member: Data is accurately presented with no errors.
+    Add New Member Info: Functions correctly when valid data is provided.
+    Deleted Members List: Displays correct information without any issues.
+   
+3. Premium Plans
+    Data is accurate and functioning correctly.
+   
+4. Stories List
+    Information is correctly displayed without errors.
+   
+5. Earnings List
+    Fully functional and without issues.
+   
+6. Contact Messages
+    Working properly and handling messages correctly.
+   
+7. General Settings
+    All settings operate correctly and reflect updates.
+   
+8. Frontend Settings
+    Choose Color: All themes apply changes correctly.
+    Appearances:
+      Header inputs work correctly and reflect changes.
+      Pages function properly without errors.
+      Footer inputs work correctly and reflect changes.
+   
+9. Configuration  Profile Attributes
+    Religion: Data fetches and updates correctly.
+    Caste: Data is retrieved and stored properly.
+    SubCaste: Functions correctly.
+    Language: No issues found.
+    Family Value: Works as expected.
+    Family Status: Displays and updates correctly.
+    On Behalf: Data retrieval and updates work without errors.
+   
+10. Profile Sections
+     All inputs function correctly and save changes.
+    
+11. Social Media Comments
+     Data is stored correctly.
+    
+12. Payments
+     All inputs work correctly and reflect changes on save.
+    
+13. Email Setup
+     Fully functional and handles email errors properly.
+    
+14. Currency Settings
+     Configuration: Works properly.
+     Currency: No changes can be made, and available currencies are correct.
+    
+15. Captcha Settings
+     Unable to verify without a key, but inputs function correctly and save changes.
+    
+16. Google Analytics Settings
+     Key verification unavailable, but settings function properly.
+    
+17. SMS Settings
+     Twilio & Msg91: Key verification unavailable, but inputs work and save changes correctly.
+    
+18. FAQ Section
+     Inputs function correctly and reflect changes.
+    
+19. Send SMS Feature
+     Inputs work correctly and reflect changes.
+    
+20. Language Settings
+     Fully functional with saved changes reflected properly.
+    
+21. Manage Admin Profile
+     All inputs work correctly and save changes properly.
+    
+22. SEO Settings
+     Fully functional and saves changes correctly.
+    
+23. Staff Panel
+     All Roles: New data can be added, and changes are reflected.
+     Staffs Role Panel: Data updates correctly and displays changes.
+    
+24. Knowledge Base
+     Page shows no results and displays a 404 error.
+     Issue needs to be fixed to load data properly.
+     Content should be revised to ensure uniqueness, expanding each repetitive text to between 50 and 100 words per entry.
+
