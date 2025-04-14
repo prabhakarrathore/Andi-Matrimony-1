@@ -1,143 +1,398 @@
-/* Global Reset */
+/* --- General Reset & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.page0 {
-    page-break-after: always;
-    padding: 5vh 5vw;
-    text-align: start;
-    width: 100%;
-    height: 30vh;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-.page {
-    height: 90vh;
-    page-break-after: always;
-    background-image: url("../images/Bg2.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 5vh 5vw;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ecb45b;
-}
-
-/* Subheading & Image Layout */
-.content-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+.container {
+    max-width: 1100px;
     margin: auto;
-    text-align: left;
-    gap: 2vw;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
-/* Image on the Left */
-.image-container {
-    flex: 1;
+h1,
+h2,
+h3 {
+    margin-bottom: 0.8rem;
+    color: #1a2a6c;
+    /* Dark Blue */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #b21f66;
+    /* Deep Pink/Purple */
+}
+
+a:hover {
+    color: #e63946;
+    /* Lighter Reddish Pink */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+/* --- Header --- */
+header {
+    background: #ffffff;
+    /* White background */
+    color: #1a2a6c;
+    /* Dark Blue text */
+    padding: 1rem 0;
+    border-bottom: 2px solid #e0e0e0;
+    position: sticky;
+    /* Make header sticky */
+    top: 0;
+    z-index: 1000;
+    /* Ensure header is above other content */
+}
+
+header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.content-image {
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #b21f66;
+    /* Deep Pink/Purple logo */
+    margin-bottom: 0;
+    /* Override default heading margin */
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #1a2a6c;
+    /* Dark Blue links */
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #e63946;
+    /* Highlight color on hover/active */
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background: #1a2a6c;
+    /* Dark Blue */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* --- Slider (Home Page) --- */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    /* Take full width */
+    margin: 0 auto 2rem auto;
+    /* No horizontal margin, add bottom margin */
+    overflow: hidden;
+    background-color: #ddd;
+    /* Background while images load */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    /* For caption positioning */
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    display: none;
+    /* Hide slides initially */
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+    /* Show active slide */
+}
+
+.slide img {
     width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-height: 450px;
+    /* Adjust max height as needed */
+    object-fit: cover;
+    /* Cover the area, might crop */
+    display: block;
 }
 
-/* Text on the Right */
-.text-container {
-    flex: 1;
-    padding-left: 4vw;
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-.text-container h2 {
-    font-size: 36pt;
-    color: #ecb45b;
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
-.text-container p {
-    font-size: 1.6rem;
-    color: #e9dfbb;
-    margin-top: 10px;
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* === RESPONSIVE DESIGN === */
+.slider-btn.prev {
+    left: 10px;
+}
 
-/* For Tablets (768px and below) */
+.slider-btn.next {
+    right: 10px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+
+/* --- Intro Section (Home Page) --- */
+.intro-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #b21f66;
+    /* Deep Pink/Purple */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #e63946;
+    /* Lighter Reddish Pink */
+    color: #fff;
+}
+
+/* --- General Page Content (About, Features) --- */
+.page-content {
+    background: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-content h2 {
+    border-bottom: 2px solid #b21f66;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.page-content hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* --- Module List (About Page) --- */
+.module-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.module-list li::before {
+    content: '✔';
+    /* Checkmark or other icon */
+    color: #2ECC71;
+    /* Green */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.learn-more-link {
+    font-size: 0.9em;
+    margin-left: 10px;
+    display: inline-block;
+    /* Or block if needed */
+}
+
+
+/* --- Feature List (Features Pages) --- */
+.feature-list {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-left: 5px solid #3498DB;
+    /* Blue accent */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+    color: #3498DB;
+    /* Match border color */
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .content-container {
+    header .container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .image-container {
-        order: -1;
+    header .logo {
+        margin-bottom: 0.5rem;
     }
 
-    .text-container {
-        padding-left: 0;
+    header nav ul {
+        margin-top: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* Allow wrapping on small screens */
     }
 
-    .text-container h2 {
-        font-size: 1.8rem;
+    header nav ul li {
+        margin: 0 10px 5px 10px;
+        /* Adjust spacing */
     }
 
-    .text-container p {
-        font-size: 1.4rem;
+    .slider-caption {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .slider-btn {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+
+    .page-content {
+        margin-top: 1rem;
+        padding: 1.5rem;
     }
 }
 
-/* For Smartphones (480px and below) */
 @media (max-width: 480px) {
-
-    .page,
-    .page0 {
-        padding: 3vw;
+    header .logo {
+        font-size: 1.5rem;
     }
 
-    .section-title {
-        font-size: 1.8rem;
+    header nav ul li {
+        margin: 0 5px 5px 5px;
+        /* Further reduce spacing */
     }
 
-    .content-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 1em 0;
-        border: 2px solid #05066d;
+    header nav ul li a {
+        padding: 3px 6px;
+        /* Reduce padding on links */
     }
 
-    .image-container {
-        order: -1;
+    .slide img {
+        max-height: 250px;
+        /* Adjust for smaller screens */
     }
 
-    .content-image {
-        max-width: 90%;
-        border-radius: 5px;
+    .slider-caption {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        bottom: 10px;
     }
 
-    .text-container {
-        padding: 3em;
+    .slider-dots {
+        bottom: 5px;
     }
 
-    .text-container h2 {
-        font-size: 1.5em;
+    .dot {
+        height: 8px;
+        width: 8px;
     }
 
-    .text-container p {
-        font-size: 1em;
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }

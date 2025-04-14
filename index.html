@@ -4,30 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andi Matrimony 1</title>
+    <title>AndiMatrimony - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="page content-container">
-
-        <!-- Left: Image -->
-        <div class="image-container">
-            <img class="content-image" src="./images/logo.avif" alt="image">
+    <header>
+        <div class="container">
+            <h1 class="logo">AndiMatrimony</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="admin-features.html">Admin Features</a></li>
+                    <li><a href="user-features.html">User Features</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Right: Subheading & Text -->
-        <div class="text-container">
-            <h2>ANDi Matrimony 1</h2>
-            <p>Name: Prabhakar Rathore</p>
-            <p>Phone No.: 8287744079</p>
-            <p>Email: prabhakarrathore15@gmail.com</p>
+    <main>
+        <!-- Slider Section -->
+        <section class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="./images/A_pages-to-jpg-0001.jpg" alt="Slide 1 - Find Your Perfect Match">
+                </div>
+                <div class="slide">
+                    <img src="./images/A_pages-to-jpg-0003.jpg" alt="Slide 2 - Trusted Profiles">
+                </div>
+                <div class="slide">
+                    <img src="images/A_pages-to-jpg-0000.png" alt="Slide 3 - Success Stories">
+                </div>
+            </div>
+            <button class="slider-btn prev">‹</button>
+            <button class="slider-btn next">›</button>
+            <div class="slider-dots">
+                <!-- Dots will be added by JS -->
+            </div>
+        </section>
+
+        <!-- Introductory Content -->
+        <section class="intro-section container">
+            <h2>Connecting Hearts, Building Futures</h2>
+            <p>AndiMatrimony aims to be the leading platform for finding your life partner within the community. We
+                focus on providing a secure, user-friendly, and effective matchmaking experience.</p>
+            <a href="about.html" class="btn">Learn More About Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 AndiMatrimony. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
-    <div id="content"></div>
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
